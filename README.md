@@ -18,6 +18,7 @@ OpenTill is a modern point-of-sale (POS) system built with Laravel and TailwindC
 - **Database**: SQLite (default), MySQL/PostgreSQL supported
 - **Queue System**: Database-driven queues for background processing
 - **Testing**: Pest PHP testing framework
+- **Code Quality**: Tighten Duster, Commitlint, Husky hooks, Lint-staged
 
 ## Requirements
 
@@ -178,10 +179,11 @@ REDIS_PORT=6379
 ### Code Standards
 
 - Follow PSR-12 coding standards
-- Use Laravel Pint for code formatting: `./vendor/bin/pint`
+- Use Tighten Duster for code formatting: `./vendor/bin/duster fix`
 - Write tests for new features
 - Ensure all tests pass before submitting PR
 - Use conventional commit messages (enforced by commitlint)
+- Pre-commit hooks automatically lint staged files using lint-staged
 
 ## Security
 
