@@ -1,6 +1,6 @@
 export default {
     "**/*.php*": [
-        "vendor/bin/rector process --dry-run --no-progress-bar",
+        "vendor/bin/rector process",
         "vendor/bin/duster fix"
     ]
 }
