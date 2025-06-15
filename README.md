@@ -23,7 +23,7 @@ OpenTill is a modern point-of-sale (POS) system built with Laravel and TailwindC
 
 - PHP 8.2 or higher
 - Composer
-- Node.js & NPM
+- Bun (or Node.js & NPM)
 - SQLite (or MySQL/PostgreSQL)
 
 ## Installation
@@ -41,7 +41,8 @@ OpenTill is a modern point-of-sale (POS) system built with Laravel and TailwindC
 
 3. **Install Node.js dependencies**
    ```bash
-   npm install
+   bun install
+   # or npm install
    ```
 
 4. **Environment Setup**
@@ -58,7 +59,8 @@ OpenTill is a modern point-of-sale (POS) system built with Laravel and TailwindC
 
 6. **Build Assets**
    ```bash
-   npm run build
+   bun run build
+   # or npm run build
    ```
 
 ## Development
@@ -84,7 +86,8 @@ php artisan serve
 
 **Watch for file changes:**
 ```bash
-npm run dev
+bun run dev
+# or npm run dev
 ```
 
 **Run background queues:**
@@ -145,7 +148,7 @@ REDIS_PORT=6379
 1. **Optimize for production:**
    ```bash
    composer install --optimize-autoloader --no-dev
-   npm run build
+   bun run build
    php artisan config:cache
    php artisan route:cache
    php artisan view:cache
@@ -168,7 +171,7 @@ REDIS_PORT=6379
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
+3. Commit your changes using conventional commits (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
@@ -178,6 +181,7 @@ REDIS_PORT=6379
 - Use Laravel Pint for code formatting: `./vendor/bin/pint`
 - Write tests for new features
 - Ensure all tests pass before submitting PR
+- Use conventional commit messages (enforced by commitlint)
 
 ## Security
 
