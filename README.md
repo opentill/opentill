@@ -178,12 +178,45 @@ REDIS_PORT=6379
 
 ### Code Standards
 
+This project maintains high code quality through multiple automated tools and standards:
+
+#### Code Formatting & Quality Tools
+
+- **PHP-CS-Fixer**: Advanced code formatting with custom Tighten rules
+- **PHPCS**: Code standards checking using Tighten ruleset
+- **Pint**: Laravel-specific code styling with comprehensive rules
+- **Duster**: Integrated code quality suite by Tighten
+
+#### Available Commands
+
+```bash
+# Format code with Duster (recommended)
+./vendor/bin/duster fix
+
+# Run PHP-CS-Fixer
+./vendor/bin/php-cs-fixer fix
+
+# Check code with PHPCS
+./vendor/bin/phpcs
+
+# Format with Pint
+./vendor/bin/pint
+```
+
+#### Automated Quality Checks
+
+- **Pre-commit hooks**: Automatically lint and format staged files
+- **Lint-staged**: Runs quality checks only on changed files
+- **Commitlint**: Enforces conventional commit message format
+- **Husky**: Manages git hooks for consistent quality checks
+
+#### Development Standards
+
 - Follow PSR-12 coding standards
-- Use Tighten Duster for code formatting: `./vendor/bin/duster fix`
 - Write tests for new features
 - Ensure all tests pass before submitting PR
-- Use conventional commit messages (enforced by commitlint)
-- Pre-commit hooks automatically lint staged files using lint-staged
+- Use conventional commit messages (feat, fix, style, docs, etc.)
+- Code is automatically formatted on commit via git hooks
 
 ## Security
 
